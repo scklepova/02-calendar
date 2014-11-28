@@ -1,1 +1,6 @@
 C:\Users\Burning Soul\Documents\shpora\02-calendar\Calendar\bin\Debug\Calendar.exe.config
+C:\Users\Burning Soul\Documents\shpora\02-calendar\Calendar\bin\Debug\Calendar.exe
+C:\Users\Burning Soul\Documents\shpora\02-calendar\Calendar\bin\Debug\Calendar.pdb
+C:\Users\Burning Soul\Documents\shpora\02-calendar\Calendar\obj\Debug\Calendar.csprojResolveAssemblyReference.cache
+C:\Users\Burning Soul\Documents\shpora\02-calendar\Calendar\obj\Debug\Calendar.exe
+C:\Users\Burning Soul\Documents\shpora\02-calendar\Calendar\obj\Debug\Calendar.pdb
