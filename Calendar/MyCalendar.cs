@@ -13,13 +13,13 @@ namespace Calendar
 {
     public class MyCalendar
     {
-        public Dictionary<Enum, List<int>> Calendar;
+        public Dictionary<DayOfWeek, List<int>> Calendar;
         public DateTime Date;
 
 
         public MyCalendar(DateTime date)
         {
-            this.Calendar = new Dictionary<Enum, List<int>>();
+            this.Calendar = new Dictionary<DayOfWeek, List<int>>();
             for (var day = DayOfWeek.Monday; day <= DayOfWeek.Saturday; day++)
                 Calendar.Add(day, new List<int>());
             Calendar.Add(DayOfWeek.Sunday, new List<int>());

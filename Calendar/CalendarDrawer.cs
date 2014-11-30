@@ -63,12 +63,12 @@ namespace Calendar
             } 
         }
 
-        private static void DrawAllWeekdayInMonth(MyCalendar calendar, Enum dayOfWeek, int col)
+        private static void DrawAllWeekdayInMonth(MyCalendar calendar, DayOfWeek dayOfWeek, int col)
         {
             var row = 0;
             
             if (calendar.Calendar[dayOfWeek].First() > 1 &&
-                ((DayOfWeek) dayOfWeek < calendar.FirstDay().DayOfWeek && (DayOfWeek) dayOfWeek != DayOfWeek.Sunday ||
+                (dayOfWeek < calendar.FirstDay().DayOfWeek && dayOfWeek != DayOfWeek.Sunday ||
                  calendar.FirstDay().DayOfWeek == DayOfWeek.Sunday))
             {
                 DrawDay(row, col, "", Brushes.WhiteSmoke);
@@ -85,7 +85,7 @@ namespace Calendar
 
 
             if (calendar.LastDay().DayOfWeek != DayOfWeek.Sunday && calendar.Calendar[dayOfWeek].Last() < calendar.LastDay().Day &&
-                ((DayOfWeek) dayOfWeek > calendar.LastDay().DayOfWeek || (DayOfWeek) dayOfWeek == DayOfWeek.Sunday))
+                (dayOfWeek > calendar.LastDay().DayOfWeek || dayOfWeek == DayOfWeek.Sunday))
             {
                 DrawDay(row, col, "", Brushes.WhiteSmoke);
             }
