@@ -16,7 +16,9 @@ namespace Calendar
             var date = new DateTime(inputDate[2], inputDate[1], inputDate[0]);
 
             var calendar = new MyCalendar(date);
-            calendar.ShowCalendar();
+
+            var calendarDrawer = new CalendarDrawer();
+            calendarDrawer.DrawCalendar(calendar);
         }
     }
 }
