@@ -11,7 +11,13 @@ namespace Calendar
     class CalendarDrawer
     {
 
-        private static int Left, Top, ImageSize, CalendarWidth, CellHeight, DateHeight, MonthHeight, CellWidth;
+        private static int Left;
+        private static int Top;
+        private static int ImageSize;
+        private static int CalendarWidth;
+        private static int CellHeight, CellWidth;
+        private static int DateHeight;
+        private static int MonthHeight;
         private static Bitmap Bmp;
         private static Graphics G;
         private static StringFormat SFormat;
@@ -128,12 +134,11 @@ namespace Calendar
 
         private static void DrawDaysOfWeek(MyCalendar calendar)
         {
-            var col = 0;
-            foreach (var dayOfWeek in calendar.Calendar.Keys)
+            for (var col = 0; col < 6; col++)
             {
-                DrawDayOfWeek(col, (DayOfWeek)dayOfWeek);
-                col++;
+                DrawDayOfWeek(col, DayOfWeek.Monday + col);
             }
+            DrawDayOfWeek(6, DayOfWeek.Sunday);
         }
     }
 }

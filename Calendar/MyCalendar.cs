@@ -29,20 +29,15 @@ namespace Calendar
         }
 
 
-        void FillMonth()
+        private void FillMonth()
         {
-            for (var day = 1; day <= DateTime.DaysInMonth(Date.Year, Date.Month); day++)
+            Enumerable.Range(1, DateTime.DaysInMonth(Date.Year, Date.Month)).Select(day =>
             {
                 var date = new DateTime(Date.Year, Date.Month, day);
                 Calendar[date.DayOfWeek].Add(day);
-            }     
-        }
+                return false;
+            }).ToArray();
 
-
-        Enum GetDayOfWeek(int day)
-        {
-            var date = new DateTime(Date.Year, Date.Month, day);
-            return date.DayOfWeek;
         }
 
 
