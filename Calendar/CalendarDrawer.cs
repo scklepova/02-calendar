@@ -134,11 +134,10 @@ namespace Calendar
 
         private static void DrawDaysOfWeek(MyCalendar calendar)
         {
-            for (var col = 0; col < 6; col++)
+            for (var col = 0; col < 7; col++)
             {
-                DrawDayOfWeek(col, DayOfWeek.Monday + col);
+                DrawDayOfWeek(col, calendar.Calendar.Keys.ElementAt(col));
             }
-            DrawDayOfWeek(6, DayOfWeek.Sunday);
         }
     }
 }

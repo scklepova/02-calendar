@@ -31,13 +31,11 @@ namespace Calendar
 
         private void FillMonth()
         {
-            Enumerable.Range(1, DateTime.DaysInMonth(Date.Year, Date.Month)).Select(day =>
+            var dates = Enumerable.Range(1, DateTime.DaysInMonth(Date.Year, Date.Month)).Select(day => new DateTime(Date.Year, Date.Month, day)).ToArray();
+            foreach (var date in dates)
             {
-                var date = new DateTime(Date.Year, Date.Month, day);
-                Calendar[date.DayOfWeek].Add(day);
-                return false;
-            }).ToArray();
-
+                Calendar[date.DayOfWeek].Add(date.Day);
+            }
         }
 
 
